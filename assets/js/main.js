@@ -15,20 +15,31 @@ const navLinks = document.querySelectorAll(".header-right a");
 window.addEventListener("scroll", () => {
     let current = "";
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+    sections.forEach((section) => {
+        const top = section.offsetTop - 120;
+        const height = section.offsetHeight;
 
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
+        if (
+            window.scrollY >= top &&
+            window.scrollY < top + height
+        ) {
+            current = section.id;
         }
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove("active");
+    // If we're at the bottom of the page, force the last section active
+    if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 5
+    ) {
+        current = sections[sections.length - 1].id;
+    }
 
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
+    navLinks.forEach((link) => {
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${current}`
+        );
     });
 });
 
