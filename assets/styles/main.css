@@ -114,7 +114,7 @@ body {
 }
 
 .tiers-blue-section .blue-inner {
-    padding: 85px 40% 250px 100px;
+    padding: 85px 100px 250px 100px;
 }
 
 .tiers-blue-section .blue-inner h2 {
@@ -172,6 +172,8 @@ body {
 }
 
 .understanding-smart-tiers-box {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     padding: 50px;
     background: #F3F7FB;
@@ -203,6 +205,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .ensuring-list {
@@ -235,17 +238,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 50px;
+    margin-top: 30px;
+    flex: 1;           /* Takes all remaining space */
 }
 
 .factors-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 50px;
+    flex: 1;           /* Share remaining height equally */
     background: #fff;
     border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
@@ -255,7 +260,7 @@ body {
 
 .understanding-smart-tiers-box:hover {
     border: 1px solid #1D4F9F;
-    box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.24);
+    box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.12);
 }
 
 .smart-function-categories {
@@ -392,7 +397,7 @@ body {
 
 .smart-categories-block:hover {
     border: 1px solid #1D4F9F;
-    box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.24);
+    box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.12);
 }
 
 .essential-functions:hover,
@@ -461,6 +466,7 @@ body {
     padding: 20px;
     background: #fff;
     border-radius: 10px;
+    color: #1D4F9F;
 }
 
 .note-block .note-grid .grid-item .icon {
@@ -482,7 +488,7 @@ body {
 
 .note-block:hover {
     border: 1px solid #1D4F9F;
-    box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.24);
+    box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.12);
 }
 
 .definitions-section {
@@ -520,6 +526,13 @@ body {
     margin-top: 50px;
     padding: 50px;
     border-radius: 15px;
+}
+
+.high-box:hover,
+.moderate-box:hover,
+.lower-box:hover {
+    box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.12);
+    transform: translateY(-10px);
 }
 
 .lower-box h1,
@@ -599,7 +612,7 @@ body {
 .smart-tiers-determined {
     display: flex;
     gap: 10px;
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
     margin: 25px 100px 100px;
     padding: 20px;
     background: #F3F7FB;
@@ -616,6 +629,7 @@ body {
 .smart-tiers-determined .info {
     display: flex;
     align-items: center;
+    font-size: 14px;
 }
 
 #capabilities {
@@ -642,6 +656,7 @@ body {
     font-size: 44px;
     line-height: 52px;
     letter-spacing: -0.015em;
+    font-weight: 700;
 }
 
 /* ===============================
@@ -669,6 +684,7 @@ body {
     font-size: 18px;
     font-weight: 700;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
 }
 
 .summary-table thead th:first-child {
@@ -678,6 +694,10 @@ body {
 .summary-table thead th:last-child {
     border-top-right-radius: 20px;
     border-right: none;
+}
+
+.summary-table tbody td:nth-child(2) {
+    padding-top: 30px; /* increase until it visually lines up */
 }
 
 /* Body */
@@ -782,12 +802,13 @@ body {
 .explained-section {
     display: flex;
     margin: 0 0 50px;
+
 }
 
 .explained {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     color: #1D4F9F;
     font-size: 28px;
     line-height: 36px;
@@ -823,7 +844,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 170px;
+    min-width: 170px;
     padding: 10px 20px;
     background: #1D4F9F;
     border-radius: 5px;
@@ -845,7 +866,7 @@ body {
 .key-features {
     width: fit-content;
     height: 45px;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     padding: 10px 20px;
     background: #F3F7FB;
     border: 1px solid #D7E3F3;
@@ -913,7 +934,7 @@ body {
 }
 
 .accordion-middle {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.08px;
@@ -950,19 +971,8 @@ body {
 
 .accordion-exp-inners {
     display: flex;
-    gap: 30px;
+    gap: 15px;
     margin: 30px 0;
-}
-
-/* Nested bullet */
-.accordion-exp-inners .col > ul > li > ul > li::marker {
-    color: #013F5C;
-}
-
-.accordion-exp-inners .col ul ul {
-    list-style-type: disc;
-    margin-top: 8px;
-    margin-left: 20px;
 }
 
 .accordion-exp-inners .col {
@@ -985,6 +995,11 @@ body {
     margin-left: 10px;
 }
 
+.accordion-exp-inners .col ul ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
 .accordion-exp-inners .col ul li {
     color: #013F5C;
     font-size: 16px;
@@ -995,6 +1010,10 @@ body {
 
 .accordion-exp-inners .col ul li::marker {
     color: #F37425;
+}
+
+.accordion-exp-inners .col > ul > li > ul > li::marker {
+    color: #013F5C; /* Change to whatever colour you want */
 }
 
 .note {
@@ -1116,7 +1135,7 @@ body {
 
 .body-block:hover {
     border: 1px solid #1D4F9F;
-    box-shadow: 0 12px 24px rgba(29, 79, 159, 0.24);
+    box-shadow: 0 12px 24px rgba(29, 79, 159, 0.12);
 }
 
 .tailoring-outcomes {
@@ -1161,7 +1180,7 @@ body {
 
 .outcomes-card:hover {
     border: 1px solid #1D4F9F;
-    box-shadow: 0 12px 24px rgba(29, 79, 159, 0.24);
+    box-shadow: 0 12px 24px rgba(29, 79, 159, 0.12);
 }
 
 .outcomes-card:hover .icon svg path {
@@ -1169,7 +1188,7 @@ body {
 }
 
 .resources-include {
-    margin: 50px 0 140px;
+    margin: 50px 0 40px;
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
@@ -1314,7 +1333,7 @@ body {
     }
 
     .tiers-blue-section .blue-inner {
-        padding: 85px 40% 250px 70px;
+        padding: 85px 70px 250px 70px;
     }
 
     .understanding-smart-tiers {
