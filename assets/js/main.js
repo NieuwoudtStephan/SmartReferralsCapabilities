@@ -8,26 +8,23 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
 const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".header-right a");
+const navLinks = document.querySelectorAll('a[href^="#"]');
 
 window.addEventListener("scroll", () => {
     let current = "";
 
-    sections.forEach((section) => {
-        const top = section.offsetTop - 120;
-        const height = section.offsetHeight;
+    const headerOffset = 120;
 
-        if (
-            window.scrollY >= top &&
-            window.scrollY < top + height
-        ) {
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= headerOffset && rect.bottom > headerOffset) {
             current = section.id;
         }
     });
 
-    // If we're at the bottom of the page, force the last section active
+    // Keep the last section active at the bottom of the page
     if (
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 5
@@ -41,6 +38,31 @@ window.addEventListener("scroll", () => {
             link.getAttribute("href") === `#${current}`
         );
     });
+});
+
+const hamburger = document.getElementById("mobile-menu-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeButton = document.getElementById("close-menu");
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("open");
+}
+
+function toggleMenu() {
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("open");
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+if (closeButton) {
+    closeButton.addEventListener("click", closeMenu);
+}
+
+// Close when any menu link is clicked
+document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+    link.addEventListener("click", closeMenu);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -61,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Expand All
     expandAllButton.addEventListener("click", () => {
         const shouldExpand = [...accordions].some(
-            accordion => !accordion.classList.contains("active")
+            (accordion) => !accordion.classList.contains("active")
         );
 
         accordions.forEach((accordion) => {
@@ -73,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateExpandAllButton() {
         const allExpanded = [...accordions].every(
-            accordion => accordion.classList.contains("active")
+            (accordion) => accordion.classList.contains("active")
         );
 
         expandAllButton.classList.toggle("active", allExpanded);

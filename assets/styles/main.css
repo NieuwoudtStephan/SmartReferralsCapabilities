@@ -58,8 +58,14 @@ body {
     display: flex;
 }
 
+
+
 .header.scrolled {
     background: #013F5C;
+}
+
+.hamburger {
+    display: none;
 }
 
 .header-left {
@@ -1263,6 +1269,216 @@ body {
     padding: 100px;
 }
 
+
+
+/* ==========================================================
+   Mobile Menu
+   ========================================================== */
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    flex-direction: column;
+
+    background: #013F5C;
+
+    z-index: 9999;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.mobile-menu-header {
+    height: 90px;
+
+    background: #013F5C;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+    flex-shrink: 0;
+}
+
+.mobile-menu-logo svg {
+    width: 180px;
+    height: auto;
+}
+
+.mobile-menu-close {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.mobile-menu-close svg path {
+    stroke: #fff;
+}
+
+/* ==========================================================
+   Body
+   ========================================================== */
+
+.mobile-menu-body {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ==========================================================
+   Navigation
+   ========================================================== */
+
+.mobile-menu-nav {
+    flex: 1;
+
+    padding: 0 24px;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 22px 0;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(255,255,255,.35);
+
+    transition: .25s;
+}
+
+.mobile-nav-number {
+    width: 64px;
+
+    margin-left: -15px;
+
+    color: #FFFFFF;
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+
+    flex-shrink: 0;
+}
+
+.mobile-nav-text {
+    color: #FFFFFF;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+}
+
+.mobile-nav-link.active .mobile-nav-text {
+    color: #F37425;
+}
+
+.mobile-nav-link:hover .mobile-nav-text {
+    color: #F37425;
+}
+
+/* ==========================================================
+   Contact Section
+   ========================================================== */
+
+.mobile-menu-contact {
+    margin-top: auto;
+
+    padding: 40px 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mobile-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    text-decoration: none;
+
+    color: #FFFFFF;
+
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.mobile-contact-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: rgba(255,255,255,.9);
+
+    border-radius: 14px;
+}
+
+.mobile-contact-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================================
+   Hamburger Animation
+   ========================================================== */
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
 #overview .overview-main-footer {
     position: relative;
     z-index: 1;
@@ -1341,74 +1557,83 @@ body {
 /* ============================
    Tablet
    ============================ */
+/* ============================
+   Tablet
+   ============================ */
 @media screen and (min-width: 1001px) and (max-width: 1403px) {
+
     .header {
-        padding: 28px 70px;
+        padding: 28px 24px;
     }
 
     .tiers-blue-section .blue-inner {
-        padding: 85px 70px 250px 70px;
+        padding: 85px 24px 250px;
     }
 
     .understanding-smart-tiers {
-        padding: 0 70px 25px 70px;
+        padding: 0 24px 25px;
     }
 
     .smart-function-categories {
-        padding: 0 70px;
+        padding: 0 24px;
     }
 
     .important-note-section {
-        padding: 25px 70px 100px 70px;
+        padding: 25px 24px 100px;
     }
 
     .definitions-section {
-        padding: 0 70px;
+        padding: 0 24px;
     }
 
     .smart-tiers-determined {
-        margin: 25px 70px 100px 70px;
+        margin: 25px 24px 100px;
     }
 
     #capabilities {
-        padding: 70px;
+        padding: 24px;
     }
 
     .tailoring-heading {
-        padding: 70px;
+        padding: 24px;
     }
 
     .tailoring-outcomes {
-        padding: 70px;
+        padding: 24px;
     }
 
     #overview .overview-main-body {
-        padding: 100px 70px;
+        padding: 100px 24px;
     }
 
     #overview .overview-main-footer {
-        padding: 0 70px;
+        padding: 0 24px;
     }
 
     .overview-main-footer-top {
-        margin: 0 70px -120px 70px;
+        margin: 0 24px -120px;
     }
 
     .header-left {
-        flex: 1
+        flex: 1;
     }
 
     .header-right {
-        flex: 2;
+        display: none;
+    }
+
+    .hamburger {
+        flex: 1;
     }
 
     .definitions-boxes {
         flex-direction: column;
-        margin: 0 ;
+        margin: 0;
     }
 
-    .moderate-box, .high-box {
-        margin: 0 ;
+    .moderate-box,
+    .high-box {
+        margin: 0;
     }
 
     .outcomes-body-inner {
@@ -1417,13 +1642,13 @@ body {
 
     .resource-card {
         width: 100%;
-        max-width: 450px; /* or remove it entirely */
+        max-width: 450px;
         aspect-ratio: 24 / 19;
     }
 
     .resources-inner {
         grid-template-columns: repeat(2, 1fr);
-        margin: -450px 70px 0;
+        margin: -450px 24px 0;
     }
 
     .resources-include {
@@ -1434,14 +1659,27 @@ body {
         flex-direction: column;
         gap: 30px;
     }
+
+    .hamburger {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .hamburger svg path {
+        stroke: #fff;
+    }
 }
 
 /* ============================
    Mobile
    ============================ */
 @media screen and (max-width: 1000px) {
+
     .header {
-        padding: 28px 70px;
+        padding: 28px 24px;
     }
 
     .header-left {
@@ -1449,7 +1687,19 @@ body {
     }
 
     .header-right {
-        flex: 2;
+        display: none;
+    }
+
+    .hamburger {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .hamburger svg path {
+        stroke: #fff;
     }
 
     .definitions-boxes {
@@ -1468,53 +1718,53 @@ body {
     }
 
     .tiers-blue-section .blue-inner {
-        padding: 85px 70px 900px 70px;
+        padding: 85px 24px 900px;
     }
 
     .understanding-smart-tiers {
-        padding: 0 70px 25px 70px;
+        padding: 0 24px 25px;
         flex-direction: column;
         margin-top: -850px;
     }
 
     .smart-function-categories {
-        padding: 0 70px;
+        padding: 0 24px;
     }
 
     .important-note-section {
-        padding: 25px 70px 100px 70px;
+        padding: 25px 24px 100px;
     }
 
     .definitions-section {
-        padding: 0 70px;
+        padding: 0 24px;
     }
 
     .smart-tiers-determined {
-        margin: 25px 70px 100px 70px;
+        margin: 25px 24px 100px;
     }
 
     #capabilities {
-        padding: 70px;
+        padding: 24px;
     }
 
     .tailoring-heading {
-        padding: 70px;
+        padding: 24px;
     }
 
     .tailoring-outcomes {
-        padding: 70px;
+        padding: 24px;
     }
 
     .resources-inner {
-        margin: -115px 70px 0;
+        margin: -115px 24px 0;
     }
 
     #overview .overview-main-body {
-        padding: 100px 70px;
+        padding: 100px 24px;
     }
 
     #overview .overview-main-footer {
-        padding: 0 70px;
+        padding: 0 24px;
     }
 
     .smart-categories-block .functions-section {
@@ -1529,10 +1779,9 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
     .resources-inner {
         grid-template-columns: repeat(2, 1fr);
-        margin: -450px 70px 0;
+        margin: -450px 24px 0;
     }
 
     .resources-include {
@@ -1540,12 +1789,12 @@ body {
     }
 
     .overview-main-footer-top {
-        margin: 0 70px -120px 70px;
+        margin: 0 24px -120px;
     }
 
     .resource-card {
         width: 100%;
-        max-width: 450px; /* or remove it entirely */
+        max-width: 450px;
         aspect-ratio: 24 / 19;
     }
 }
