@@ -353,7 +353,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     border-radius: 15px;
 }
@@ -445,14 +445,14 @@ body {
 
 .note-block .heading-section {
     display: flex;
-    gap: 25px;
+    gap: 15px;
 }
 
 .note-block .heading-section .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     background: #1D4F9F;
     border-radius: 15px;
@@ -1720,6 +1720,11 @@ section {
     .moderate-box,
     .high-box {
         margin: 0;
+        padding: 24px
+    }
+
+    .lower-box {
+        padding: 24px;
     }
 
     .accordion-exp-inners {
@@ -1728,13 +1733,13 @@ section {
     }
 
     .tiers-blue-section .blue-inner {
-        padding: 85px 24px 900px;
+        padding: 85px 24px 600px;
     }
 
     .understanding-smart-tiers {
         padding: 0 24px 25px;
         flex-direction: column;
-        margin-top: -850px;
+        margin-top: -550px;
     }
 
     .smart-function-categories {
@@ -1868,11 +1873,12 @@ section {
     .mobile-summary-table-card {
         display: flex;
         border: 1px solid #D7E3F3;
-        padding: 50px;
+        padding: 24px;
         width: 100%;
         flex-direction: column;
         border-radius: 15px;
         background-color: #ffffff;
+
 
     }
 
@@ -1942,14 +1948,58 @@ section {
         flex-direction: column;
         text-align: center;
         gap: 24px;
-        margin: 250px 0 50px;
+        margin: 200px 0 50px;
     }
 
     .overview-main-footer-top {
-        margin: 0 24px -205px;
+        margin: 0 24px -155px;
+        padding: 24px;
     }
 
     .outcomes-body {
         margin: 25px 0 85px;
+    }
+
+    .essential-functions,
+    .scored-functions {
+        padding: 24px;
+    }
+
+    .essential-functions .heading,
+    .scored-functions .heading {
+        gap: 15px;
+    }
+
+    .understanding-smart-tiers-box {
+        padding: 24px;
+    }
+
+    .factors-item {
+        min-height: 60px;
+    }
+
+    .smart-categories-block {
+        padding: 24px;
+    }
+
+    .smart-categories-block .heading-section {
+        gap: 15px;
+    }
+
+    .smart-categories-block .heading-section .icon {
+        min-width: 50px;
+    }
+
+    .note-block {
+        padding: 24px;
+    }
+
+    .note-block .note-grid .grid-item {
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    .body-block {
+        padding: 24px;
     }
 }
