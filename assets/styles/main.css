@@ -279,7 +279,7 @@ body {
 .smart-categories-block p {
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05px;
 }
 
 .smart-categories-block p strong {
@@ -351,7 +351,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05px;
     text-transform: uppercase;
 }
 
@@ -359,7 +359,7 @@ body {
 .scored-functions .heading p {
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08px;
 }
 
 .essential-functions .heading p strong,
@@ -421,7 +421,7 @@ body {
 .note-block p {
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05px;
 }
 
 .note-block p strong {
@@ -481,7 +481,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05px;
 }
 
 /* Hover */
@@ -502,7 +502,7 @@ body {
     font-size: 44px;
     line-height: 52px;
     font-weight: 700;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.015px;
 }
 
 .definitions-section p {
@@ -1413,7 +1413,7 @@ body {
     }
 
     .resources-include {
-        margin: 50px 0 475px;
+        margin: 50px 0 400px;
     }
 
     .accordion-exp-inners {
