@@ -1235,7 +1235,7 @@ body {
     gap: 25px;
 
     max-width: 360px;
-    max-height: 285px;
+    /*max-height: 285px;*/
     aspect-ratio: 24 / 19;
 
     background: #fff;
@@ -1644,6 +1644,7 @@ section {
         width: 100%;
         max-width: 450px;
         aspect-ratio: 24 / 19;
+
     }
 
     .resources-inner {
@@ -1776,12 +1777,16 @@ section {
     }
 
     .outcomes-body-inner {
-        grid-template-columns: repeat(2, 1fr);
+        /*grid-template-columns: repeat(2, 1fr);*/
+        display: flex;
+        flex-direction: column;
     }
 
     .resources-inner {
-        grid-template-columns: repeat(2, 1fr);
-        margin: -450px 24px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: -500px 24px 0;
     }
 
     .resources-include {
@@ -1794,7 +1799,53 @@ section {
 
     .resource-card {
         width: 100%;
-        max-width: 450px;
+        max-width: 1000px;
         aspect-ratio: 24 / 19;
+        /*max-height: 285px;*/
     }
+
+    .tiers-blue-section .blue-inner h1 {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px; /* 122.222% */
+        letter-spacing: -0.36px;
+    }
+
+    .note-block .note-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .definitions-section h1, #capabilities h1 {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px; /* 122.222% */
+        letter-spacing: -0.36px;
+    }
+
+    /*.resource-card svg {*/
+    /*    height: 80px;*/
+    /*    width: 80px;*/
+    /*}*/
+
+    .overview-main-footer-top h3 {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    .built-around, .supporting-resources {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px; /* 128.571% */
+    }
+
+    /*.resource-card svg {*/
+    /*    height: 200px;*/
+    /*    width: 200px;*/
+    /*}*/
+
 }
