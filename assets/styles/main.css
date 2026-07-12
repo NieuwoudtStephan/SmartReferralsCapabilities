@@ -30,6 +30,14 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #013F5C;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -879,8 +887,14 @@ body {
     color: #fff;
 }
 
+.accordions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .accordion {
-    margin-bottom: 24px;
+    /*margin-bottom: 24px;*/
     background: #fff;
     border: 1px solid #D7E3F3;
     border-radius: 20px;
@@ -1608,7 +1622,7 @@ section {
     }
 
     .tailoring-outcomes {
-        padding: 24px;
+        padding: 50px 24px;
     }
 
     #overview .overview-main-body {
@@ -1763,12 +1777,9 @@ section {
     }
 
     .tailoring-heading {
-        padding: 24px;
+        padding: 50px 24px;
     }
 
-    .tailoring-outcomes {
-        padding: 24px;
-    }
 
     .resources-inner {
         margin: -115px 24px 0;
@@ -2007,4 +2018,62 @@ section {
     .body-block {
         padding: 24px;
     }
+
+    .note {
+        /*width: calc(100% - 48px);*/
+        /*margin: 30px 0;*/
+        /*background: #F3F7FB;*/
+        /*border: 1px solid #D7E3F3;*/
+        /*border-radius: 15px;*/
+        /*margin: 0;*/
+        width: 100%;
+    }
+
+
+    #overview .footer-inner-left,
+    #overview .footer-inner-right {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #overview .overview-main-footer-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tailoring-outcomes {
+        padding: 50px 24px;
+    }
+
+    #overview .footer-inner-left,
+    #overview .footer-inner-right {
+        display: block;
+        width: 100%;
+        flex: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .outcomes-card {
+        height: 100px;
+    }
+
+    .smart-tiers-determined {
+        margin-bottom: 50px;
+    }
+
+    #capabilities {
+        padding: 50px 24px;
+    }
+
 }
