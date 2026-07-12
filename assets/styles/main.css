@@ -104,12 +104,21 @@ body {
 }
 
 .main-body {
-    width: 100vw;
+    width: 100%;
 }
 
 #tiers {
     width: 100%;
 }
+
+.summary-table-wrapper {
+    display: block;
+}
+
+.mobile-summary-table-wrapper {
+    display: none;
+}
+
 
 .tiers-blue-section {
     background:
@@ -879,7 +888,7 @@ body {
 
 .key-features {
     width: fit-content;
-    height: 45px;
+    min-height: 45px;
     /*margin-bottom: 30px;*/
     padding: 10px 20px;
     background: #F3F7FB;
@@ -1786,15 +1795,11 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: -500px 24px 0;
+        margin: -950px 24px 0;
     }
 
     .resources-include {
-        margin: 50px 0 505px;
-    }
-
-    .overview-main-footer-top {
-        margin: 0 24px -120px;
+        margin: 50px 0 950px;
     }
 
     .resource-card {
@@ -1848,4 +1853,103 @@ section {
     /*    width: 200px;*/
     /*}*/
 
+    .summary-table-wrapper {
+        display: none;
+    }
+
+    .mobile-summary-table-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        gap: 24px;
+    }
+
+    .mobile-summary-table-card {
+        display: flex;
+        border: 1px solid #D7E3F3;
+        padding: 50px;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 15px;
+        background-color: #ffffff;
+
+    }
+
+    .smart-feature {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        color: #1D4F9F;
+    }
+
+    .what-it-does {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+        margin-bottom: 25px;
+        color: #013F5C;
+    }
+
+    .key-benefit {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+        text-transform: uppercase;
+        color: #F37425;
+        margin-bottom: 5px;
+    }
+
+    .mobile-summary-table-card p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+        color: #013F5C;
+    }
+
+    .explained-section {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .expand-all {
+        align-items: flex-start;
+        justify-content: flex-start;
+
+    }
+
+    .exp-button {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .smart-tiers-determined {
+        width: calc(100% - 50px);
+    }
+
+    #overview .overview-main-footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        margin: 250px 0 50px;
+    }
+
+    .overview-main-footer-top {
+        margin: 0 24px -205px;
+    }
+
+    .outcomes-body {
+        margin: 25px 0 85px;
+    }
 }
