@@ -1882,6 +1882,11 @@ section {
 
     }
 
+    .mobile-summary-table-card:hover {
+        border: 1px solid #1D4F9F;
+        box-shadow: 0 12px 24px 0 rgba(29, 79, 159, 0.12);
+    }
+
     .smart-feature {
         font-size: 16px;
         font-style: normal;
