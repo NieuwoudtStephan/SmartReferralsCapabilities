@@ -363,6 +363,9 @@ function renderAccordions(containerSelector = ".accordions-container") {
         <div class="accordion-middle">${item.s}</div>
         ${benefit}
     </div>
+    <div class="accordion-divider">
+
+</div>
     <div class="accordion-expanded">${item.body}</div>
 </div>`;
     }).join("");
