@@ -1022,7 +1022,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .accordion-exp-inners .col .lbl {
