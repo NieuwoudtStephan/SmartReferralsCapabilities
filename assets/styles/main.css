@@ -1810,6 +1810,10 @@ section {
         flex-direction: column;
     }
 
+    .resources-inner > a {
+        display: block;
+        width: 100%;
+    }
     .resources-inner {
         display: flex;
         flex-direction: column;
