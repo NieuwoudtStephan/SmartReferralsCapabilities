@@ -1812,7 +1812,7 @@ section {
 
     .resources-inner > a {
         display: block;
-        width: 100%;
+        width: 100% !important;
     }
     .resources-inner {
         display: flex;
