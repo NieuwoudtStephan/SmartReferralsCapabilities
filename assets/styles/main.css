@@ -1021,6 +1021,10 @@ body {
     flex: 1;
 }
 
+a {
+    text-decoration: none;
+}
+
 .accordion-exp-inners .col .lbl {
     margin-bottom: 15px;
     color: #1D4F9F;
